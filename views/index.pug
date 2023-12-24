@@ -2,4 +2,22 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
+    if isListeningToSpotify
+      p Listening to Spotify:
+
+        span Song: #{spotifySongName}
+
+        span Artist: #{spotifyArtistName}
+
+        img(src=spotifyAlbumCover, alt="Album Cover")
+    else
+      p Not listening to spotify bruvh
+
+    p Discord Information:
+
+      span Status: #{discordStatus}
+
+      img(src=discordAvatar, alt="Discord Avatar")
+
+
